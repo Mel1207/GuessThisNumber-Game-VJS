@@ -19,12 +19,23 @@ const displayMessage = (message) => {
 const wrongGuess = () => {
     currentScore -= 1 
     currentScoreEl.textContent = currentScore
+
+    if(currentScore < 1) {
+        displayMessage('GAME OVER')
+    }
 }
 
 // create a random number
-const random = Math.trunc(Math.random() * 20 + 1)
-numberDisplay.textContent = random
+let random = Math.trunc(Math.random() * 20) + 1
 
+// Inc - Dec Functions
+const incValue = () => {
+    numInput.stepUp();
+}
+
+const decValue = () => {
+    numInput.stepDown();
+}
 
 // Defining Functions
 const checkValue = () => {
@@ -36,8 +47,12 @@ const checkValue = () => {
 
     } else if (guess === random) {
         displayMessage('Correct 😍')
-        // numberDisplay.textContent = random
-        highestScoreEl.textContent = currentScore
+        numberDisplay.textContent = random
+        if(currentScore > highestScoreEl.textContent) {
+            highestScoreEl.textContent = currentScore
+        }
+
+        // highestScoreEl.textContent = currentScore
 
     } else if (guess > random) {
         displayMessage('To high buddy! 🤣')
@@ -49,12 +64,13 @@ const checkValue = () => {
     }
 }
 
-const incValue = () => {
-    numInput.stepUp();
-}
-
-const decValue = () => {
-    numInput.stepDown();
+const restartGame = () => {
+    random = Math.trunc(Math.random() * 20) + 1
+    // numberDisplay.textContent = random
+    currentScore = 20
+    currentScoreEl.textContent = currentScore
+    numInput.value = ''
+    displayMessage('Start Guessing . . .')
 }
 
 
@@ -62,3 +78,4 @@ const decValue = () => {
 btnCheck.addEventListener('click', checkValue)
 btnInc.addEventListener('click', incValue)
 btnDec.addEventListener('click', decValue)
+btnRestart.addEventListener('click', restartGame)
