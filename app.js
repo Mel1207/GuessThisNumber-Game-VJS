@@ -66,7 +66,7 @@ const checkValue = () => {
 
 const restartGame = () => {
     random = Math.trunc(Math.random() * 20) + 1
-    // numberDisplay.textContent = random
+    numberDisplay.textContent = '?'
     currentScore = 20
     currentScoreEl.textContent = currentScore
     numInput.value = ''
