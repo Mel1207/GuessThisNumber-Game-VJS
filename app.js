@@ -2,6 +2,7 @@
 const btnCheck = document.querySelector('.btn-check')
 const btnRestart = document.querySelector('.btn-restart')
 const numInput = document.getElementById('input')
+const numberDisplay = document.querySelector('.number')
 const btnInc = document.querySelector('.btn-inc')
 const btnDec = document.querySelector('.btn-dec')
 
@@ -20,7 +21,9 @@ const decValue = () => {
 }
 
 
-
+// create a random number
+const random = Math.trunc(Math.random() * 20 + 1)
+numberDisplay.textContent = random
 
 
 
