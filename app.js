@@ -1,7 +1,7 @@
 'Use strict'
 const btnCheck = document.querySelector('.btn-check')
 const btnRestart = document.querySelector('.btn-restart')
-const numInput = document.querySelector('.input')
+const numInput = document.getElementById('input')
 const btnInc = document.querySelector('.btn-inc')
 const btnDec = document.querySelector('.btn-dec')
 
@@ -11,9 +11,12 @@ const checkValue = () => {
     console.log(numInput.value)
 }
 
-const addValue = () => {
-    let value = numInput.value
-    value += 1
+const incValue = () => {
+    numInput.stepUp();
+}
+
+const decValue = () => {
+    numInput.stepDown();
 }
 
 
@@ -23,4 +26,5 @@ const addValue = () => {
 
 // Event Listeners
 btnCheck.addEventListener('click', checkValue)
-btnInc.addEventListener('click', addValue)
+btnInc.addEventListener('click', incValue)
+btnDec.addEventListener('click', decValue)
