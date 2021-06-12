@@ -6,10 +6,19 @@ const numberDisplay = document.querySelector('.number')
 const btnInc = document.querySelector('.btn-inc')
 const btnDec = document.querySelector('.btn-dec')
 
+const displayMessage = (message) => {
+    document.querySelector('.message').textContent = message
+}
 
 // Defining Functions
 const checkValue = () => {
-    console.log(numInput.value)
+    if(numInput.value === numberDisplay.textContent) {
+        displayMessage('Correct! 😍')
+    } else if (numInput.value > numberDisplay.textContent) {
+        displayMessage('Too high buddy! 🤣')
+    } else if (numInput.value < numberDisplay.textContent) {
+        displayMessage('Too low buddy! 😣')
+    }
 }
 
 const incValue = () => {
@@ -19,7 +28,6 @@ const incValue = () => {
 const decValue = () => {
     numInput.stepDown();
 }
-
 
 // create a random number
 const random = Math.trunc(Math.random() * 20 + 1)
