@@ -7,6 +7,7 @@ const btnInc = document.querySelector('.btn-inc')
 const btnDec = document.querySelector('.btn-dec')
 const currentScoreEl = document.querySelector('.current-score')
 const highestScoreEl = document.querySelector('.highest-score')
+const overlayWin = document.querySelector('.overlay-win')
 
 let currentScore = 20;
 
@@ -52,6 +53,8 @@ const checkValue = () => {
             highestScoreEl.textContent = currentScore
         }
 
+        overlayWin.style.display = 'block'
+
         // highestScoreEl.textContent = currentScore
 
     } else if (guess > random) {
@@ -71,6 +74,7 @@ const restartGame = () => {
     currentScoreEl.textContent = currentScore
     numInput.value = ''
     displayMessage('Start Guessing . . .')
+    overlayWin.style.display = 'none'
 }
 
 
