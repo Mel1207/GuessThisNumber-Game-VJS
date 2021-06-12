@@ -5,6 +5,7 @@ button, .btn {
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 input, .input {
@@ -61,9 +62,16 @@ body {
 .btn-check img, .btn-restart img {
   height: 18px;
 }
+.btn-check:hover, .btn-restart:hover {
+  background: #43719c;
+}
 
 .btn-restart {
   z-index: 25;
+}
+.btn-restart:hover .restart-icon {
+  transition: 0.5s ease;
+  transform: rotate(-360deg);
 }
 
 .container {
@@ -138,6 +146,7 @@ body {
   font-size: 150px;
   color: #404040;
   margin-right: 20px;
+  text-align: center;
 }
 .section-2 .col-1 .number-container .btn-container {
   display: flex;
@@ -149,6 +158,9 @@ body {
   color: #fff;
   height: 80px;
   width: 130px;
+}
+.section-2 .col-1 .number-container .btn-container .btn-inc:hover, .section-2 .col-1 .number-container .btn-container .btn-dec:hover {
+  background: #43719c;
 }
 .section-2 .col-2 {
   display: flex;

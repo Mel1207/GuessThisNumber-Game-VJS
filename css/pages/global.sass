@@ -27,8 +27,17 @@ body
     img 
         height: 18px
 
+    &:hover
+        background: $light-bg
+
 .btn-restart
     z-index: 25
+    
+
+    &:hover
+        .restart-icon
+            transition: 0.5s ease
+            transform: rotate(-360deg)
 
 .container
     position: relative
@@ -101,6 +110,7 @@ body
                 font-size: 150px
                 color: $secondary-text
                 margin-right: 20px
+                text-align: center
 
             .btn-container
                 display: flex
@@ -112,6 +122,9 @@ body
                     color: $primary-text
                     height: 80px
                     width: 130px
+
+                    &:hover
+                        background: $light-bg
 
     .col-2 
         display: flex
