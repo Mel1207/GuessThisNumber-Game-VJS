@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Guess This Number - a simple guessing number game powerered with vanila JS</title>
+</head>
+<body>
+    <div class="container">
+        <section class="section-1">
+            <div class="box-number">
+                <h1 class="number">?</h1>
+            </div>
+            <div class="game-title">
+                <h2>Guess This number</h2>
+                <h5>From 1 to 20</h5>
+            </div>
+        </section>
+        <section class="section-2">
+            <div class="col-1">
+                <div class="number-container">
+                    <input type="number" class="input">
+                    <div class="btn-container">
+                        <button class="btn-inc"><img src="/img/icon-inc.svg" alt=""></button>
+                        <button class="btn-dec"><img src="/img/icon-dec.svg" alt=""></button>
+                    </div>
+                </div>
+                
+                <button class="btn btn-check">Check <img src="/img/icon-check.svg" alt="chec icon"></button>
+            </div>
+            <div class="col-2">
+                <h3>Start Guessing . . .</h3>
+                <p>🥈 Current Score: 0</p>
+                <p>🏆 Highest Score: 0</p>
+                <button class="btn btn-restart">Restart <img src="/img/icon-restart.svg" alt="restart icon"></button>
+            </div>
+            <div class="col-3">
+                <h3>Instructions</h3>
+                <p>guess the hidden number, use up /down arrow buttons to control number or up/down arrow key on keyboard. Your highest score will be put on highest score.</p>
+            </div>
+        </section>
+    </div>
+    
+
+
+    <script src="/app.js"></script>
+</body>
+</html>

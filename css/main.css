@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+button, .btn {
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+input, .input {
+  outline: none;
+  background: #fff;
+  padding: 10px;
+  border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+h3 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(79.42deg, #27B8E6 9.71%, #7E9BFF 76.78%);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.col-1, .col-2, .col-3 {
+  height: 300px;
+}
+
+.btn-check, .btn-restart {
+  background: #3C6285;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 25px;
+  margin-top: 20px;
+  width: 220px;
+  height: 70px;
+}
+.btn-check img, .btn-restart img {
+  height: 18px;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  max-width: 1300px;
+}
+.container .section-1 {
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.container .section-1 .box-number {
+  height: 200px;
+  width: 200px;
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 6px 8px 17px 1px rgba(84, 134, 145, 0.2);
+}
+.container .section-1 .box-number h1 {
+  color: #404040;
+  font-size: 150px;
+}
+.container .section-1 .game-title {
+  margin-left: 50px;
+}
+.container .section-1 .game-title h2 {
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+.container .section-1 .game-title h5 {
+  font-size: 35px;
+}
+.container .section-2 {
+  display: grid;
+  padding: 80px 0;
+  grid-template-columns: 40% 30% 1fr;
+}
+.container .section-2 .col-1 .number-container {
+  display: flex;
+}
+.container .section-2 .col-1 .number-container .input {
+  height: 180px;
+  width: 200px;
+  box-shadow: 6px 8px 17px 1px rgba(84, 134, 145, 0.2);
+  font-size: 150px;
+  color: #404040;
+  margin-right: 20px;
+}
+.container .section-2 .col-1 .number-container .btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .section-2 .col-1 .number-container .btn-container .btn-inc, .container .section-2 .col-1 .number-container .btn-container .btn-dec {
+  background: #3C6285;
+  color: #fff;
+  height: 80px;
+  width: 130px;
+}
+.container .section-2 .col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=main.css.map */
