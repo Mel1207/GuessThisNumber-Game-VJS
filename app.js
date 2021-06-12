@@ -10,14 +10,24 @@ const displayMessage = (message) => {
     document.querySelector('.message').textContent = message
 }
 
+// create a random number
+const random = Math.trunc(Math.random() * 20 + 1)
+
+
 // Defining Functions
 const checkValue = () => {
-    if(numberDisplay.textContent === numInput.value) {
-        displayMessage('Correct! 😍')
-    } else if (numberDisplay.textContent > numInput.value ) {
+
+    const guess = Number(numInput.value)
+
+    if(!guess) {
+        displayMessage('No number 🤷‍♂️')
+    } else if (guess === random) {
+        displayMessage('Correct 😍')
+        numberDisplay.textContent = random
+    } else if (guess > random) {
+        displayMessage('To high buddy! 🤣')
+    } else if (guess < random) {
         displayMessage('Too low buddy! 😣')
-    } else if (numberDisplay.textContent < numInput.value ) {
-        displayMessage('Too high buddy! 🤣')
     }
 }
 
@@ -29,9 +39,7 @@ const decValue = () => {
     numInput.stepDown();
 }
 
-// create a random number
-const random = Math.trunc(Math.random() * 20 + 1)
-numberDisplay.textContent = random
+
 
 
 
