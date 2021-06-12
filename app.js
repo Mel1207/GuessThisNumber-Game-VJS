@@ -12,12 +12,12 @@ const displayMessage = (message) => {
 
 // Defining Functions
 const checkValue = () => {
-    if(numInput.value === numberDisplay.textContent) {
+    if(numberDisplay.textContent === numInput.value) {
         displayMessage('Correct! 😍')
-    } else if (numInput.value > numberDisplay.textContent) {
-        displayMessage('Too high buddy! 🤣')
-    } else if (numInput.value < numberDisplay.textContent) {
+    } else if (numberDisplay.textContent > numInput.value ) {
         displayMessage('Too low buddy! 😣')
+    } else if (numberDisplay.textContent < numInput.value ) {
+        displayMessage('Too high buddy! 🤣')
     }
 }
 
